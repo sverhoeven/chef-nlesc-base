@@ -9,4 +9,4 @@ version          '0.1.0'
 depends "openssh"
 depends "ntp"
 depends "java"
-
+depends "git"

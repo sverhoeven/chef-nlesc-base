@@ -19,7 +19,11 @@
 
 node.default['ntp']['servers'] = ["0.pool.ntp.org", "1.pool.ntp.org", "2.pool.ntp.org"]
 node.default['java']['jdk_version'] = 7
+node.default['java']['oracle']['accept_oracle_download_terms'] = true
 
 include_recipe "ntp"
 include_recipe "openssh"
-include_recipe "java"
+include_recipe "git"
+include_recipe "java::oracle"
+# TODO see if 2 jdk's can be installed and the oracle jdk as default
+#include_recipe "java::openjdk"
